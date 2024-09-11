@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [ "${#}" -ne 2 ]; then
+    echo "Usage: $(basename "${0}") <file> <ext>"
+    exit 1
+fi
+
+file="${1}"
+newExtension="${2}"
+
+if [ ! -f "${file}" ]; then
+    echo "Error: The file '${file}' does not exist."
+    exit 1
+fi
+
+if [ -z "${newExtension}" ]; then
+    echo "Error: Extension cannot be empty."
+    exit 1
+fi
+
+baseName="${file%.*}"
+if [ "${baseName}" = "${file}" ]; then
+    newFile="${file}.${newExtension}"
+else
+    newFile="${baseName}.${newExtension}"
+fi
+
+if ! mv "${file}" "${newFile}"; then
+    echo "Error: Failed to rename file."
+    exit 1
+fi
+
+echo "File renamed to '${newFile}'."
