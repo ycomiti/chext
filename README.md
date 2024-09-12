@@ -21,7 +21,8 @@ sudo bash -c 'file="/usr/bin/chext"; curl -L "https://raw.githubusercontent.com/
 
 ## Usage
 
-After installation, you can use the `chext` script to rename files by changing their extensions. Here’s how to use it:
+After installation, you can use the `chext` script to rename files by changing their extensions.<br>
+Here’s how to use it:
 
 ### Basic Syntax
 
@@ -56,7 +57,8 @@ For more information, please refer to the `LICENSE` file included in this reposi
 
 ## Contributing
 
-If you would like to contribute to this project, please fork the repository and submit a pull request. For more details, see the `CONTRIBUTING.md` file.
+If you would like to contribute to this project, please fork the repository and submit a pull request.<br>
+For more details, see the `CONTRIBUTING.md` file.
 
 ## Support
 
